@@ -1,0 +1,9 @@
+stewards:
+  clinical_owner: "clinops@clinic.org"
+  data_steward: "data@clinic.org"
+  privacy_officer: "privacy@clinic.org"
+approvals:
+  require: ["clinical_owner", "privacy_officer"]
+change_control:
+  rfc_required: true
+  versioning: semantic

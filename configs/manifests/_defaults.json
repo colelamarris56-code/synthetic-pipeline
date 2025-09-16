@@ -1,0 +1,5 @@
+{
+    "agent_record_cap": 500,
+    "strict_units": true,
+    "drop_unknown_fields": true
+}

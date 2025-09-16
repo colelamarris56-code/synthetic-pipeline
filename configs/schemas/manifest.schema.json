@@ -1,0 +1,82 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Feature Manifest",
+    "type": "object",
+    "required": [
+        "extract_id",
+        "purpose",
+        "phi_mode",
+        "schema"
+    ],
+    "properties": {
+        "extract_id": {
+            "type": "string",
+            "minLength": 1
+        },
+        "purpose": {
+            "type": "string",
+            "enum": [
+                "treatment",
+                "operations",
+                "research"
+            ]
+        },
+        "phi_mode": {
+            "type": "string",
+            "enum": [
+                "safe_harbor",
+                "expert"
+            ]
+        },
+        "record_cap": {
+            "type": "integer",
+            "minimum": 1
+        },
+        "stratify_by": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "schema": {
+            "type": "object",
+            "minProperties": 1,
+            "additionalProperties": {
+                "type": "object",
+                "required": [
+                    "type"
+                ],
+                "properties": {
+                    "type": {
+                        "type": "string",
+                        "enum": [
+                            "string",
+                            "number",
+                            "integer",
+                            "boolean",
+                            "date"
+                        ]
+                    },
+                    "pii": {
+                        "type": "boolean"
+                    },
+                    "redact": {
+                        "type": "string"
+                    },
+                    "unit": {
+                        "type": "string"
+                    },
+                    "min": {
+                        "type": "number"
+                    },
+                    "max": {
+                        "type": "number"
+                    },
+                    "not_future": {
+                        "type": "boolean"
+                    }
+                }
+            }
+        }
+    }
+}

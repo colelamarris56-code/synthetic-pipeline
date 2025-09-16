@@ -1,0 +1,6 @@
+{
+    "default_mode": "safe_harbor",
+    "date_shift_days": 7,
+    "zip3_keep": true,
+    "rare_code_suppression": true
+}

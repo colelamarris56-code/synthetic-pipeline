@@ -1,0 +1,31 @@
+{
+    "extract_id": "t2d_care_gaps_v3",
+    "purpose": "treatment",
+    "phi_mode": "safe_harbor",
+    "schema": {
+        "patient_id": {
+            "type": "string",
+            "pii": true,
+            "redact": "token"
+        },
+        "last_hba1c_value": {
+            "type": "number",
+            "unit": "%",
+            "min": 3.5,
+            "max": 20
+        },
+        "last_hba1c_date": {
+            "type": "date",
+            "not_future": true
+        },
+        "hba1c_overdue_6m": {
+            "type": "boolean"
+        }
+    },
+    "stratify_by": [
+        "language",
+        "race_ethnicity",
+        "insurance"
+    ],
+    "record_cap": 200000
+}

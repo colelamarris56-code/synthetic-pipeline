@@ -1,0 +1,6 @@
+{
+    "unit_mismatch": "Lab unit incompatible with clinic standard",
+    "unmapped_code": "Missing mapping to standard vocabulary",
+    "temporal_impossible": "Date/time violates clinical logic",
+    "out_of_range": "Value outside physiological ranges"
+}

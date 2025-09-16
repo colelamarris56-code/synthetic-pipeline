@@ -1,0 +1,7 @@
+# Add to dashboard_app.py:
+# Agent monitoring tab that tracks:
+- Agent status and health
+- Decision logs and reasoning
+- Performance metrics
+- Resource usage
+- Error rates and recovery

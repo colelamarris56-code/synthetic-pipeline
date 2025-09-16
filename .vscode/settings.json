@@ -1,0 +1,35 @@
+{
+    // --- Editor ---
+    "editor.formatOnSave": true,
+    "editor.rulers": [
+        80
+    ],
+    "editor.stickyScroll.enabled": false,
+    "diffEditor.useInlineViewWhenSpaceIsLimited": false,
+    // --- Explorer hygiene ---
+    "files.exclude": {
+        ".venv": true,
+        "dist": true,
+        "data/output": true,
+        ".pytest_cache": true,
+        "**/__pycache__": true
+    },
+    // --- Git ---
+    "git.enableSmartCommit": true,
+    "git.autofetch": true,
+    // --- Make/Build ---
+    "makefile.configureOnOpen": true,
+    // --- Python ---
+    // Use a workspace-local venv so paths aren't user-specific
+    "python.defaultInterpreterPath": "${workspaceFolder}\\.venv\\Scripts\\python.exe",
+    // Formatter & save actions (Black + organize imports)
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": "explicit"
+    },
+    "python.formatting.provider": "none",
+    "python.analysis.typeCheckingMode": "basic",
+    "python.analysis.diagnosticSeverityOverrides": {
+        "reportAbstractUsage": "error"
+    }
+}

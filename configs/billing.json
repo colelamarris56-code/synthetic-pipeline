@@ -1,0 +1,13 @@
+{
+    "price_per_1k_tokens_cents": 50,
+    "costs": {
+        "synth_job_base": 25,
+        "synth_row": 0.02,
+        "dp_training_min": 500,
+        "agent_call": 0.5
+    },
+    "caps": {
+        "max_rows_per_job": 200000,
+        "max_agent_records": 500
+    }
+}

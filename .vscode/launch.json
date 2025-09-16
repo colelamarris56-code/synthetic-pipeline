@@ -1,0 +1,35 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: Attach (debugpy)",
+            "type": "python",
+            "request": "attach",
+            "connect": {
+                "host": "127.0.0.1",
+                "port": 5678
+            },
+            "pathMappings": [
+                {
+                    "localRoot": "${workspaceFolder}",
+                    "remoteRoot": "${workspaceFolder}"
+                }
+            ]
+        },
+        {
+            "name": "Run Streamlit dashboard",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/.venv/Scripts/streamlit",
+            "args": [
+                "run",
+                "scripts/dashboard_app.py",
+                "--server.address",
+                "127.0.0.1",
+                "--server.port",
+                "8501"
+            ],
+            "console": "integratedTerminal"
+        }
+    ]
+}

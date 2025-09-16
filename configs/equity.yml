@@ -1,0 +1,7 @@
+stratifications:
+  - name: language
+  - name: race_ethnicity
+  - name: insurance
+reporting:
+  require_equity_strata: true
+  suppress_small_cells: 11
